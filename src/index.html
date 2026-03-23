@@ -1,620 +1,796 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./output.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Noto+Rashi+Hebrew:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DK+Uloopet+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Double:wght@100..900&family=Noto+Rashi+Hebrew:wght@100..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Playwrite+DK+Uloopet+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <style>
-.roboto-rose {
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
-}
+  .roboto-rose {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+  }
 
-@keyframes neonGlow {
-  0% { box-shadow: 0 0 5px #ff3b3b, 0 0 10px #ff3b3b, 0 0 20px #ff3b3b; }
-  50% { box-shadow: 0 0 15px #ff3b3b, 0 0 30px #ff3b3b, 0 0 60px #ff3b3b; }
-  100% { box-shadow: 0 0 5px #ff3b3b, 0 0 10px #ff3b3b, 0 0 20px #ff3b3b; }
-}
+  @keyframes neonGlow {
+    0% {
+      box-shadow: 0 0 5px #ff3b3b, 0 0 10px #ff3b3b, 0 0 20px #ff3b3b;
+    }
 
-.glow-btn { animation: neonGlow 1.8s ease-in-out infinite; }
+    50% {
+      box-shadow: 0 0 15px #ff3b3b, 0 0 30px #ff3b3b, 0 0 60px #ff3b3b;
+    }
 
-@keyframes iconGlow {
-  0% { box-shadow: 0 0 5px rgba(255,255,255,0.2); }
-  50% { box-shadow: 0 0 15px rgba(255,255,255,0.6), 0 0 25px rgba(255,255,255,0.4); }
-  100% { box-shadow: 0 0 5px rgba(255,255,255,0.2); }
-}
+    100% {
+      box-shadow: 0 0 5px #ff3b3b, 0 0 10px #ff3b3b, 0 0 20px #ff3b3b;
+    }
+  }
 
-.social-glow { animation: iconGlow 2s infinite ease-in-out; }
+  .glow-btn {
+    animation: neonGlow 1.8s ease-in-out infinite;
+  }
 
-#typing-text::after {
-  content: "|";
-  animation: blink 1s infinite;
-  margin-left: 5px;
-}
+  @keyframes iconGlow {
+    0% {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
 
-@keyframes blink {
-  0%,50%,100% { opacity: 1; }
-  25%,75% { opacity: 0; }
-}
+    50% {
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.6), 0 0 25px rgba(255, 255, 255, 0.4);
+    }
 
-@keyframes gradientMove {
-  0% { background-position: 0% }
-  100% { background-position: 200% }
-}
+    100% {
+      box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+    }
+  }
 
-.animate-gradient {
-  background-size: 200% auto;
-  animation: gradientMove 3s linear infinite;
-}
+  .social-glow {
+    animation: iconGlow 2s infinite ease-in-out;
+  }
+
+  #typing-text::after {
+    content: "|";
+    animation: blink 1s infinite;
+    margin-left: 5px;
+  }
+
+  @keyframes blink {
+
+    0%,
+    50%,
+    100% {
+      opacity: 1;
+    }
+
+    25%,
+    75% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes gradientMove {
+    0% {
+      background-position: 0%
+    }
+
+    100% {
+      background-position: 200%
+    }
+  }
+
+  .animate-gradient {
+    background-size: 200% auto;
+    animation: gradientMove 3s linear infinite;
+  }
 </style>
 
 <body class="bg-black text-white">
 
-<!-- Navbar -->
-<nav class="md:px-16 px-6 bg-transparent fixed w-full z-30">
-  <div class="flex justify-between items-center py-3.5 font-serif">
-    <div class="flex gap-2 items-center">
-      <img src="lets bet.jpg" alt="" class="h-12 w-12 rounded-full">
-      <h1 class="italic text-2xl font-semibold">Lets<span class="text-orange-600">bets</span></h1>
-    </div>
-    <div class="text-gray-300 md:flex gap-8 hidden">
-      <a href=""><ul class="text-orange-600 font-bold">Home</ul></a>
-      <a href=""><ul class="hover:text-red-600 transition duration-300 delay-50">Games</ul></a>
-      <a href=""><ul class="hover:text-red-600 transition duration-300 delay-50">Offers</ul></a>
-      <a href=""><ul class="hover:text-red-600 transition duration-300 delay-50">Contact Us</ul></a>
-    </div>
-    <div class="flex gap-3.5 items-center">
-      <button class="hover:bg-black hover:text-white rounded-3xl px-4 py-2 bg-linear-to-r from-indigo-900 via-red-500 to-pink-900 cursor-pointer">Play Now</button>
-      <div class="text-2xl flex md:hidden">
-        <i class="fa-solid fa-bars text-gray-400"></i>
+  <!-- Navbar -->
+  <nav class="md:px-16 px-6 bg-transparent fixed w-full z-30">
+    <div class="flex justify-between items-center py-3.5 font-serif">
+      <div class="flex gap-2 items-center">
+        <img src="lets bet.jpg" alt="" class="h-12 w-12 rounded-full">
+        <h1 class="italic text-2xl font-semibold">Lets<span class="text-orange-600">bets</span></h1>
       </div>
+      <div class="text-gray-300 md:flex gap-8 hidden">
+        <a href="./">
+          <ul class="text-orange-600 font-bold">Home</ul>
+        </a>
+        <a href="#populargames">
+          <ul class="hover:text-red-600 transition duration-300 delay-50">Games</ul>
+        </a>
+        <a href="#offers">
+          <ul class="hover:text-red-600 transition duration-300 delay-50">Offers</ul>
+        </a>
+        <a href="#whyus">
+          <ul class="hover:text-red-600 transition duration-300 delay-50">Why letsets</ul>
+        </a>
+        <a href="#review">
+          <ul class="hover:text-red-600 transition duration-300 delay-50">Players Reviews</ul>
+        </a>
+        <a href="#faq">
+          <ul class="hover:text-red-600 transition duration-300 delay-50">FAQ</ul>
+        </a>
+      </div>
+      <a href="https://t.me/eliteusasweeps">
+        <div class="flex gap-3.5 items-center">
+          <button
+            class="hover:bg-black hover:text-white rounded-3xl px-4 py-2 bg-linear-to-r from-indigo-900 via-red-500 to-pink-900 cursor-pointer">Play
+            Now</button>
+          <div class="text-2xl flex md:hidden">
+            <i class="fa-solid fa-bars text-gray-400"></i>
+          </div>
+        </div>
+      </a>
+
     </div>
-  </div>
-  <hr class="text-gray-500">
-</nav>
-<br><br>
+    <hr class="text-gray-500">
+  </nav>
+  <br><br>
 
-<!-- advertise  -->
- 
-<!-- Mini Glass Bar (FIXED) -->
+  <!-- advertise  -->
 
-<div class="relative z-30 flex flex-col md:flex-row justify-center items-center px-5 h-screen gap-6 mt-8">
-  <video autoplay muted loop playsinline 
-  class="absolute inset-0 w-full h-full object-cover z-0">
+  <!-- Mini Glass Bar (FIXED) -->
 
-  <source src="crypto.mp4" type="video/mp4">
+  <div class="relative z-28 flex flex-col md:flex-row justify-center items-center px-5 h-screen gap-6 mt-8">
+    <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0">
 
-</video>
-  
-  <!-- TOP CONTENT -->
-<div class="text-center max-w-xl ">
+      <source src="crypto.mp4" type="video/mp4">
 
-  <!-- <h1 class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text 
-bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 
-animate-gradient drop-shadow-[0_0_15px_rgba(255,100,200,0.6)]">
+    </video>
 
-  Discover Top Games.
+    <!-- TOP CONTENT -->
+    <div class="text-center max-w-xl ">
 
-  <h1 class="text-3xl md:text-5xl font-bold text-white drop-shadow-lg mt-4"> <span id="typing-text"></span> </h1>
-</h1> -->
-  <h1 class="text-3xl md:text-5xl font-bold text-white drop-shadow-lg mt-4"> <span id="typing-text"></span> </h1>
-  <h2 class="italic text-xl md:text-3xl text-green-800 font-semibold mt-2 drop-shadow-lg">
-      Your Ultimate Gaming Playground!
-    </h2>
-    <p class="text-gray-500 max-w-xl mt-4 text-md md:text-xl drop-shadow-md">
-      Dive into a world of thrilling games, instant rewards, and endless fun. Play anytime, anywhere, and experience gaming like never before!
-    </p>
+      
+      <h1 class="text-3xl md:text-5xl font-bold text-white drop-shadow-lg mt-4"> <span id="typing-text"></span> </h1>
+      <h2 class="italic text-xl md:text-3xl text-green-800 font-semibold mt-2 drop-shadow-lg">
+        Your Ultimate Gaming Playground!
+      </h2>
+      <p class="text-gray-500 max-w-xl mt-4 text-md md:text-xl drop-shadow-md">
+        Dive into a world of thrilling games, instant rewards, and endless fun. Play anytime, anywhere, and experience
+        gaming like never before!
+      </p>
 
 
 
-</div>
+    </div>
 
-  <!-- Glass box -->
-<div class="backdrop-blur-md bg-white/10 border border-white/20 shadow-lg shadow-gray-700 rounded-xl px-2 py-4 w-full max-w-[760px] mx-4">
-    <!-- <h2 class="text-3xl  font-bold text-center mb-6 bg-gradient-to-r from-green-500 to-indigo-500 bg-clip-text text-transparent">
+    <!-- Glass box -->
+    <div
+      class="backdrop-blur-md bg-white/10 border border-white/20 shadow-lg shadow-gray-700 rounded-xl px-2 py-4 w-full max-w-[760px] mx-4">
+      <!-- <h2 class="text-3xl  font-bold text-center mb-6 bg-gradient-to-r from-green-500 to-indigo-500 bg-clip-text text-transparent">
   Play. Win. Repeat.
 </h2> -->
-<h1 class="text-3xl text-center md:text-5xl font-extrabold text-transparent bg-clip-text 
+      <h1 class="text-3xl text-center md:text-5xl font-extrabold text-transparent bg-clip-text 
 bg-gradient-to-r from-orange-400 via-pink-500 to-purple-500 
 animate-gradient drop-shadow-[0_0_15px_rgba(255,100,200,0.6)]">
 
-  Discover Top Games
+        Discover Top Games
 
-</h1>
-    <!-- Grid -->
-    <div class="grid grid-cols-3 gap-4 mt-4">
+      </h1>
+      <!-- Grid -->
+      <div class="grid grid-cols-3 gap-4 mt-4">
 
-      <!-- Card -->
-      <div class="group relative cursor-pointer">
-
-        <!-- Image -->
-        <img src="juwa.jpeg" class="h-24 w-full object-cover rounded-xl transition duration-500 group-hover:scale-110">
-
-        <!-- Overlay -->
-        <div class="absolute inset-0 bg-black/70 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
-          
-          <button class="bg-red-600 px-3 py-1 rounded-lg text-white text-sm mb-2 hover:bg-red-500">
-            Play
-          </button>
-
-          <button class="bg-yellow-500 px-3 py-1 rounded-lg text-black text-xs hover:bg-yellow-400">
-            Claim Bonus
-          </button>
-
-        </div>
-
-        <!-- Title -->
-<h1 class="text-center mt-2 text-md font-semibold 
-text-transparent bg-clip-text 
-bg-gradient-to-r from-yellow-400 to-white 
-drop-shadow-[0_0_6px_rgba(255,150,50,0.8)] 
-group-hover:drop-shadow-[0_0_12px_rgba(255,120,200,1)]
-group-hover:scale-110 transition duration-300">
-
-  Juwa
-
-</h1>      </div>
+        <!-- Card -->
 
 
-      <!-- Repeat same card -->
-      <div class="group relative cursor-pointer">
-        <img src="GAMEROOM.jpeg" class="h-24 w-full object-cover rounded-xl transition duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black/70 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
-          <button class="bg-red-600 px-3 py-1 rounded-lg text-white text-sm mb-2">Play</button>
-          <button class="bg-yellow-500 px-3 py-1 rounded-lg text-black text-xs">Claim Bonus</button>
-        </div>
-       <h1 class="text-center mt-2 text-md font-semibold 
-text-transparent bg-clip-text 
-bg-gradient-to-r from-yellow-400 to-white 
-drop-shadow-[0_0_6px_rgba(255,150,50,0.8)] 
-group-hover:drop-shadow-[0_0_12px_rgba(255,120,200,1)]
-group-hover:scale-110 transition duration-300">
+        <a href="https://t.me/eliteusasweeps">
+          <div class="group relative cursor-pointer">
 
-  Gameroom
+            <!-- Image -->
+            <img src="juwa.jpeg"
+              class="h-24 w-full object-cover rounded-xl transition duration-500 group-hover:scale-110">
 
-</h1> 
-      </div>
+            <!-- Overlay -->
+            <div
+              class="absolute inset-0 bg-black/70 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
 
-      <div class="group relative cursor-pointer">
-        <img src="gamevoult.jpeg" class="h-24 w-full object-cover rounded-xl transition duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black/70 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
-          <button class="bg-red-600 px-3 py-1 rounded-lg text-white text-sm mb-2">Play</button>
-          <button class="bg-yellow-500 px-3 py-1 rounded-lg text-black text-xs">Claim Bonus</button>
-        </div>
-        <h1 class="text-center mt-2 text-md font-semibold 
-text-transparent bg-clip-text 
-bg-gradient-to-r from-yellow-400 to-white 
-drop-shadow-[0_0_6px_rgba(255,150,50,0.8)] 
-group-hover:drop-shadow-[0_0_12px_rgba(255,120,200,1)]
-group-hover:scale-110 transition duration-300">
+              <button class="bg-red-600 px-3 py-1 rounded-lg text-white text-sm mb-2 hover:bg-red-500">
+                Play
+              </button>
 
-  Gamevoult
+              <button class="bg-yellow-500 px-3 py-1 rounded-lg text-black text-xs hover:bg-yellow-400">
+                Claim Bonus
+              </button>
 
-</h1> 
-      </div>
+            </div>
 
-      <div class="group relative cursor-pointer">
-        <img src="MILKYWAY.jpeg" class="h-24 w-full object-cover rounded-xl transition duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black/70 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
-          <button class="bg-red-600 px-3 py-1 rounded-lg text-white text-sm mb-2">Play</button>
-          <button class="bg-yellow-500 px-3 py-1 rounded-lg text-black text-xs">Claim Bonus</button>
-        </div>
-        <h1 class="text-center mt-2 text-md font-semibold 
-text-transparent bg-clip-text 
-bg-gradient-to-r from-yellow-400 to-white 
-drop-shadow-[0_0_6px_rgba(255,150,50,0.8)] 
-group-hover:drop-shadow-[0_0_12px_rgba(255,120,200,1)]
-group-hover:scale-110 transition duration-300">
-
-  Milkyway
-
-</h1> 
-      </div>
-
-      <div class="group relative cursor-pointer">
-        <img src="ONION.jpeg" class="h-24 w-full object-cover rounded-xl transition duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black/70 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
-          <button class="bg-red-600 px-3 py-1 rounded-lg text-white text-sm mb-2">Play</button>
-          <button class="bg-yellow-500 px-3 py-1 rounded-lg text-black text-xs">Claim Bonus</button>
-        </div>
-        <h1 class="text-center mt-2 text-md font-semibold 
-text-transparent bg-clip-text 
-bg-gradient-to-r from-yellow-400 to-white
-drop-shadow-[0_0_6px_rgba(255,150,50,0.8)] 
-group-hover:drop-shadow-[0_0_12px_rgba(255,120,200,1)]
-group-hover:scale-110 transition duration-300">
-
-  OnionStars
-
-</h1> 
-      </div>
-
-      <div class="group relative cursor-pointer">
-        <img src="PANDA.jpeg" class="h-24 w-full object-cover rounded-xl transition duration-500 group-hover:scale-110">
-        <div class="absolute inset-0 bg-black/70 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
-          <button class="bg-red-600 px-3 py-1 rounded-lg text-white text-sm mb-2">Play</button>
-          <button class="bg-yellow-500 px-3 py-1 rounded-lg text-black text-xs">Claim Bonus</button>
-        </div>
-        <h1 class="text-center mt-2 text-md font-semibold 
-text-transparent bg-clip-text 
-bg-gradient-to-r from-yellow-400 to-white
-drop-shadow-[0_0_6px_rgba(255,150,50,0.8)] 
-group-hover:drop-shadow-[0_0_12px_rgba(255,120,200,1)]
-group-hover:scale-110 transition duration-300">
-
-  PandaMasters
-
-</h1> 
-      </div>
-
-    </div>
-
-<hr class="mt-2 text-gray-700">
-
-    <div class="px-6 md:px-16 flex justify-center w-full mt-2">
-      <p class="text-gray-300 italic text-center">Accepted payment methods</p>
-    </div>
-    <div class="flex justify-center gap- mt-0 text-white rounded-2xl p-2">
-      <div class="flex items-center gap-2"><i class="fa-brands fa-cash-app text-2xl text-green-500"></i><p>CashApp</p></div>
-      <div class="flex items-center gap-2"><i class="fa-brands fa-bitcoin text-2xl text-orange-500"></i><p>Crypto</p></div>
-      <div class="flex items-center gap-2"><i class="fa-brands fa-paypal text-2xl text-gray-300"></i><p>Paypal</p></div>
-      <div class="flex items-center gap-2"><i class="fa-solid fa-dollar-sign text-2xl text-green-500"></i><p>Chime</p></div>
-    </div>
-  </div>
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- Social Media Sidebar -->
-<div class="fixed top-1/2 left-4 -translate-y-1/2 z-70 flex flex-col gap-4 roboto-rose">
-  <a href="#" class="group">
-    <div class="social-glow bg-blue-600 backdrop-blur-md p-3 rounded-full hover:bg-blue-600 transition duration-300 hover:scale-110 shadow-lg">
-      <i class="fa-brands fa-facebook-f text-white"></i>
-    </div>
-  </a>
-  <a href="#" class="group">
-    <div class="social-glow bg-pink-600 backdrop-blur-md p-3 rounded-full hover:bg-pink-600 transition duration-300 hover:scale-110 shadow-lg">
-      <i class="fa-brands fa-instagram text-white"></i>
-    </div>
-  </a>
-  <a href="#" class="group">
-    <div class="social-glow bg-blue-900 backdrop-blur-md p-3 rounded-full hover:bg-gray-800 transition duration-300 hover:scale-110 shadow-lg">
-      <i class="fa-brands fa-x-twitter text-white"></i>
-    </div>
-  </a>
-  <a href="#" class="group">
-    <div class="social-glow bg-green-700 backdrop-blur-md p-3 rounded-full hover:bg-blue-500 transition duration-300 hover:scale-110 shadow-lg">
-      <i class="fa-brands fa-whatsapp text-white"></i>
-    </div>
-  </a>
-</div>
-
-<hr class="text-gray-400 mx-6 md:mx-16">
-
-<!-- Games + Why Us Shared Background Section -->
-<section class="relative px-6 md:px-16 py-20 roboto-rose">
-
-  <!-- Background Image -->
-  <div class="absolute inset-0">
-    <img src="blackjack.webp" class="w-full h-full object-cover opacity-50">
-    <div class="absolute inset-0 bg-black/40"></div>
-  </div>
-
-  <div class="relative z-10">
-
-    <!-- Popular Games -->
-    <h2 class="text-3xl roboto-rose md:text-4xl font-bold text-gray-400 text-center mb-12">
-      Popular Games
-    </h2>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
-      <!-- Cards here (reuse your card code) -->
-      <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer">
-        <div class="relative overflow-hidden">
-          <img src="crash rocket.webp" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
-          <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
-            <button class="bg-red-600 px-4 py-2 rounded-xl text-white">Play</button>
+            <!-- Title -->
+            <h1 class="text-center mt-2 text-md font-semibold 
+              text-transparent bg-clip-text 
+              bg-gradient-to-r from-yellow-400 to-white 
+              drop-shadow-[0_0_6px_rgba(255,150,50,0.8)] 
+                group-hover:drop-shadow-[0_0_12px_rgba(255,120,200,1)]
+                group-hover:scale-110 transition duration-300">Juwa</h1>
           </div>
-          <div class="p-4 text-center"><h3 class="text-lg font-semibold">Crash</h3></div>
+        </a>
+
+
+        <!-- card2 -->
+
+        <a href="https://t.me/eliteusasweeps"><div class="group relative cursor-pointer">
+          <img src="GAMEROOM.jpeg"
+            class="h-24 w-full object-cover rounded-xl transition duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/70 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <button class="bg-red-600 px-3 py-1 rounded-lg text-white text-sm mb-2">Play</button>
+            <button class="bg-yellow-500 px-3 py-1 rounded-lg text-black text-xs">Claim Bonus</button>
+          </div>
+          <h1 class="text-center mt-2 text-md font-semibold 
+text-transparent bg-clip-text 
+bg-gradient-to-r from-yellow-400 to-white 
+drop-shadow-[0_0_6px_rgba(255,150,50,0.8)] 
+group-hover:drop-shadow-[0_0_12px_rgba(255,120,200,1)]
+group-hover:scale-110 transition duration-300">
+
+            Gameroom
+
+          </h1>
+        </div></a>
+
+
+<!-- card3  -->
+       <a href="https://t.me/eliteusasweeps"> <div class="group relative cursor-pointer">
+          <img src="gamevoult.jpeg"
+            class="h-24 w-full object-cover rounded-xl transition duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/70 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <button class="bg-red-600 px-3 py-1 rounded-lg text-white text-sm mb-2">Play</button>
+            <button class="bg-yellow-500 px-3 py-1 rounded-lg text-black text-xs">Claim Bonus</button>
+          </div>
+          <h1 class="text-center mt-2 text-md font-semibold 
+text-transparent bg-clip-text 
+bg-gradient-to-r from-yellow-400 to-white 
+drop-shadow-[0_0_6px_rgba(255,150,50,0.8)] 
+group-hover:drop-shadow-[0_0_12px_rgba(255,120,200,1)]
+group-hover:scale-110 transition duration-300">
+
+            Gamevoult
+
+          </h1>
+        </div></a>
+        <!-- card4  -->
+
+        <a href="https://t.me/eliteusasweeps"><div class="group relative cursor-pointer">
+          <img src="MILKYWAY.jpeg"
+            class="h-24 w-full object-cover rounded-xl transition duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/70 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <button class="bg-red-600 px-3 py-1 rounded-lg text-white text-sm mb-2">Play</button>
+            <button class="bg-yellow-500 px-3 py-1 rounded-lg text-black text-xs">Claim Bonus</button>
+          </div>
+          <h1 class="text-center mt-2 text-md font-semibold 
+text-transparent bg-clip-text 
+bg-gradient-to-r from-yellow-400 to-white 
+drop-shadow-[0_0_6px_rgba(255,150,50,0.8)] 
+group-hover:drop-shadow-[0_0_12px_rgba(255,120,200,1)]
+group-hover:scale-110 transition duration-300">
+
+            Milkyway
+
+          </h1>
+        </div></a>
+          <!-- card5  -->
+        <a href="https://t.me/eliteusasweeps"><div class="group relative cursor-pointer">
+          <img src="ONION.jpeg"
+            class="h-24 w-full object-cover rounded-xl transition duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/70 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <button class="bg-red-600 px-3 py-1 rounded-lg text-white text-sm mb-2">Play</button>
+            <button class="bg-yellow-500 px-3 py-1 rounded-lg text-black text-xs">Claim Bonus</button>
+          </div>
+          <h1 class="text-center mt-2 text-md font-semibold 
+text-transparent bg-clip-text 
+bg-gradient-to-r from-yellow-400 to-white
+drop-shadow-[0_0_6px_rgba(255,150,50,0.8)] 
+group-hover:drop-shadow-[0_0_12px_rgba(255,120,200,1)]
+group-hover:scale-110 transition duration-300">
+
+            OnionStars
+
+          </h1>
+        </div></a>
+          <!-- card6  -->
+
+        <a href="https://t.me/eliteusasweeps"><div class="group relative cursor-pointer">
+          <img src="PANDA.jpeg"
+            class="h-24 w-full object-cover rounded-xl transition duration-500 group-hover:scale-110">
+          <div
+            class="absolute inset-0 bg-black/70 rounded-xl flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
+            <button class="bg-red-600 px-3 py-1 rounded-lg text-white text-sm mb-2">Play</button>
+            <button class="bg-yellow-500 px-3 py-1 rounded-lg text-black text-xs">Claim Bonus</button>
+          </div>
+          <h1 class="text-center mt-2 text-md font-semibold 
+text-transparent bg-clip-text 
+bg-gradient-to-r from-yellow-400 to-white
+drop-shadow-[0_0_6px_rgba(255,150,50,0.8)] 
+group-hover:drop-shadow-[0_0_12px_rgba(255,120,200,1)]
+group-hover:scale-110 transition duration-300">
+
+            PandaMasters
+
+          </h1>
+        </div></a>
+<!-- card7  -->
+      </div>
+
+      <hr class="mt-2 text-gray-700">
+
+      <div class="px-6 md:px-16 flex justify-center w-full mt-2">
+        <p class="text-gray-300 italic text-center">Accepted payment methods</p>
+      </div>
+      <div class="flex justify-center gap- mt-0 text-white rounded-2xl p-2">
+        <div class="flex items-center gap-2"><i class="fa-brands fa-cash-app text-2xl text-green-500"></i>
+          <p>CashApp</p>
+        </div>
+        <div class="flex items-center gap-2"><i class="fa-brands fa-bitcoin text-2xl text-orange-500"></i>
+          <p>Crypto</p>
+        </div>
+        <div class="flex items-center gap-2"><i class="fa-brands fa-paypal text-2xl text-gray-300"></i>
+          <p>Paypal</p>
+        </div>
+        <div class="flex items-center gap-2"><i class="fa-solid fa-dollar-sign text-2xl text-green-500"></i>
+          <p>Chime</p>
         </div>
       </div>
-    <!-- card2  -->
-     <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer"> <div class="relative overflow-hidden"> <img src="slotmachine.jpg" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500"> <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"> <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div> <div class="p-4 text-center"> <h3 class="text-lg font-semibold">Slot Machine</h3> </div> </div> </div>
-     <!-- card3 -->
-      <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer"> <div class="relative overflow-hidden"> <img src="roulette.jpg" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500"> <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"> <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div> <div class="p-4 text-center"> <h3 class="text-lg font-semibold">Roulette</h3> </div> </div> </div>
-      <!-- card4  -->
-       <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer"> <div class="relative overflow-hidden"> <img src="blackjack.webp" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500"> <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"> <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div> <div class="p-4 text-center"> <h3 class="text-lg font-semibold">Blackjack</h3> </div> </div> </div>
-       <!-- card5 -->
-        <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer"> <div class="relative overflow-hidden"> <img src="dice.jpeg" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500"> <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"> <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div> <div class="p-4 text-center"> <h3 class="text-lg font-semibold">Dice</h3> </div> </div> </div>
+    </div>
+
+  </div>
+
+
+
+
+  <!-- Social Media Sidebar -->
+  <div class="fixed top-1/2 left-4 -translate-y-1/2 z-70 flex flex-col gap-4 roboto-rose">
+    <a href="https://t.me/eliteusasweeps" class="group">
+      <div
+        class="social-glow bg-blue-600 backdrop-blur-md p-3 rounded-full hover:bg-blue-600 transition duration-300 hover:scale-110 shadow-lg">
+        <i class="fa-brands fa-facebook-f text-white"></i>
+      </div>
+    </a>
+    <a href="https://t.me/eliteusasweeps" class="group">
+      <div
+        class="social-glow bg-pink-600 backdrop-blur-md p-3 rounded-full hover:bg-pink-600 transition duration-300 hover:scale-110 shadow-lg">
+        <i class="fa-brands fa-instagram text-white"></i>
+      </div>
+    </a>
+    <a href="https://t.me/eliteusasweeps" class="group">
+      <div
+        class="social-glow bg-blue-900 backdrop-blur-md p-3 rounded-full hover:bg-gray-800 transition duration-300 hover:scale-110 shadow-lg">
+        <i class="fa-brands fa-x-twitter text-white"></i>
+      </div>
+    </a>
+    <a href="https://t.me/eliteusasweeps" class="group">
+      <div
+        class="social-glow bg-green-700 backdrop-blur-md p-3 rounded-full hover:bg-blue-500 transition duration-300 hover:scale-110 shadow-lg">
+        <i class="fa-brands fa-whatsapp text-white"></i>
+      </div>
+    </a>
+  </div>
+
+  <hr class="text-gray-400 mx-6 md:mx-16">
+
+  <!-- Games + Why Us Shared Background Section -->
+  <section class="relative px-6 md:px-16 py-20 roboto-rose">
+
+    <!-- Background Image -->
+    <div class="absolute inset-0">
+      <img src="blackjack.webp" class="w-full h-full object-cover opacity-50">
+      <div class="absolute inset-0 bg-black/40"></div>
+    </div>
+
+    <div class="relative z-10">
+
+      <!-- Popular Games -->
+      <h2 id="populargames" class="text-3xl roboto-rose md:text-4xl font-bold text-gray-400 text-center mb-12">
+        Popular Games
+      </h2>
+
+      <a href="https://t.me/eliteusasweeps"><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        <!-- Cards here (reuse your card code) -->
+        <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer">
+          <div class="relative overflow-hidden">
+            <img src="crash rocket.webp" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <button class="bg-red-600 px-4 py-2 rounded-xl text-white">Play</button>
+            </div>
+            <div class="p-4 text-center">
+              <h3 class="text-lg font-semibold">Crash</h3>
+            </div>
+          </div>
+        </div>
+        <!-- card2  -->
+        <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer">
+          <div class="relative overflow-hidden"> <img src="slotmachine.jpg"
+              class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div>
+            <div class="p-4 text-center">
+              <h3 class="text-lg font-semibold">Slot Machine</h3>
+            </div>
+          </div>
+        </div>
+        <!-- card3 -->
+        <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer">
+          <div class="relative overflow-hidden"> <img src="roulette.jpg"
+              class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div>
+            <div class="p-4 text-center">
+              <h3 class="text-lg font-semibold">Roulette</h3>
+            </div>
+          </div>
+        </div>
+        <!-- card4  -->
+        <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer">
+          <div class="relative overflow-hidden"> <img src="blackjack.webp"
+              class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div>
+            <div class="p-4 text-center">
+              <h3 class="text-lg font-semibold">Blackjack</h3>
+            </div>
+          </div>
+        </div>
+        <!-- card5 -->
+        <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer">
+          <div class="relative overflow-hidden"> <img src="dice.jpeg"
+              class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div>
+            <div class="p-4 text-center">
+              <h3 class="text-lg font-semibold">Dice</h3>
+            </div>
+          </div>
+        </div>
         <!-- card6 -->
-         <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer"> <div class="relative overflow-hidden"> <img src="arcade.avif" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500"> <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"> <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div> <div class="p-4 text-center"> <h3 class="text-lg font-semibold">Arcade</h3> </div> </div> </div>
-         <!-- card7 -->
-          <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer"> <div class="relative overflow-hidden"> <img src="juwa.jpg" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500"> <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"> <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div> <div class="p-4 text-center"> <h3 class="text-lg font-semibold">Juwa</h3> </div> </div> </div>
-          <!-- card8 -->
-           <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer"> <div class="relative overflow-hidden"> <img src="orion stars.jpeg" class="w-full h-48 object-cover group-hover:scale-110 transition duration-500"> <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center"> <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div> <div class="p-4 text-center"> <h3 class="text-lg font-semibold">Orion Stars</h3> </div> </div> </div>
-    </div>
-
-    <!-- Why Choose Letsbets -->
-    <div class="mt-20">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-4xl font-bold text-orange-600">Why Choose <span class="text-orange-600">Letsbets?</span></h2>
-        <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Experience top-tier gaming with fast performance, secure systems, and exciting rewards designed for every player.</p>
-      </div>
-
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
-        <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center hover:scale-105 transition duration-300 border border-white/10">
-          <i class="fa-solid fa-bolt text-3xl text-yellow-400 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Fast Gameplay</h3>
-          <p class="text-gray-400">Enjoy lightning-fast performance with no lag and smooth experience.</p>
+        <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer">
+          <div class="relative overflow-hidden"> <img src="arcade.avif"
+              class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div>
+            <div class="p-4 text-center">
+              <h3 class="text-lg font-semibold">Arcade</h3>
+            </div>
+          </div>
         </div>
-        <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center hover:scale-105 transition duration-300 border border-white/10">
-          <i class="fa-solid fa-shield-halved text-3xl text-green-400 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Secure Platform</h3>
-          <p class="text-gray-400">Your data and transactions are protected with top-level security.</p>
+        <!-- card7 -->
+        <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer">
+          <div class="relative overflow-hidden"> <img src="juwa.jpg"
+              class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div>
+            <div class="p-4 text-center">
+              <h3 class="text-lg font-semibold">Juwa</h3>
+            </div>
+          </div>
         </div>
-        <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center hover:scale-105 transition duration-300 border border-white/10">
-          <i class="fa-solid fa-gift text-3xl text-pink-500 mb-4"></i>
-          <h3 class="text-xl font-semibold mb-2">Daily Rewards</h3>
-          <p class="text-gray-400">Get exciting bonuses and rewards every day you play.</p>
+        <!-- card8 -->
+        <div class="group rounded-2xl overflow-hidden bg-cyan-95 shadow-lg shadow-gray-800 cursor-pointer">
+          <div class="relative overflow-hidden"> <img src="orion stars.jpeg"
+              class="w-full h-48 object-cover group-hover:scale-110 transition duration-500">
+            <div
+              class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+              <button class="bg-red-600 px-4 py-2 rounded-xl text-white"> Play </button> </div>
+            <div class="p-4 text-center">
+              <h3 class="text-lg font-semibold">Orion Stars</h3>
+            </div>
+          </div>
+        </div>
+      </div></a>
+
+      <!-- Why Choose Letsbets -->
+      <div id="whyus" class="mt-20">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-bold text-orange-600">Why Choose <span
+              class="text-orange-600">Letsbets?</span></h2>
+          <p class="text-gray-400 mt-4 max-w-2xl mx-auto">Experience top-tier gaming with fast performance, secure
+            systems, and exciting rewards designed for every player.</p>
         </div>
 
-        <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center hover:scale-105 transition duration-300 border border-white/10"> <i class="fa-solid fa-mobile-screen text-3xl text-blue-400 mb-4"></i> <h3 class="text-xl font-semibold mb-2">Mobile Friendly</h3> <p class="text-gray-400">Play anytime, anywhere with a fully responsive design.</p> </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+          <div
+            class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center hover:scale-105 transition duration-300 border border-white/10">
+            <i class="fa-solid fa-bolt text-3xl text-yellow-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Fast Gameplay</h3>
+            <p class="text-gray-400">Enjoy lightning-fast performance with no lag and smooth experience.</p>
+          </div>
+          <div
+            class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center hover:scale-105 transition duration-300 border border-white/10">
+            <i class="fa-solid fa-shield-halved text-3xl text-green-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Secure Platform</h3>
+            <p class="text-gray-400">Your data and transactions are protected with top-level security.</p>
+          </div>
+          <div
+            class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center hover:scale-105 transition duration-300 border border-white/10">
+            <i class="fa-solid fa-gift text-3xl text-pink-500 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Daily Rewards</h3>
+            <p class="text-gray-400">Get exciting bonuses and rewards every day you play.</p>
+          </div>
 
-        <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center hover:scale-105 transition duration-300 border border-white/10"> <i class="fa-solid fa-gamepad text-3xl text-purple-400 mb-4"></i> <h3 class="text-xl font-semibold mb-2">Variety of Games</h3> <p class="text-gray-400">Explore a wide range of exciting and engaging games.</p> </div>
+          <div
+            class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center hover:scale-105 transition duration-300 border border-white/10">
+            <i class="fa-solid fa-mobile-screen text-3xl text-blue-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Mobile Friendly</h3>
+            <p class="text-gray-400">Play anytime, anywhere with a fully responsive design.</p>
+          </div>
+
+          <div
+            class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center hover:scale-105 transition duration-300 border border-white/10">
+            <i class="fa-solid fa-gamepad text-3xl text-purple-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">Variety of Games</h3>
+            <p class="text-gray-400">Explore a wide range of exciting and engaging games.</p>
+          </div>
 
 
-        <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center hover:scale-105 transition duration-300 border border-white/10"> <i class="fa-solid fa-headset text-3xl text-red-400 mb-4"></i> <h3 class="text-xl font-semibold mb-2">24/7 Support</h3> <p class="text-gray-400">We are always here to help you anytime you need assistance.</p> </div>
-        
+          <div
+            class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center hover:scale-105 transition duration-300 border border-white/10">
+            <i class="fa-solid fa-headset text-3xl text-red-400 mb-4"></i>
+            <h3 class="text-xl font-semibold mb-2">24/7 Support</h3>
+            <p class="text-gray-400">We are always here to help you anytime you need assistance.</p>
+          </div>
 
 
+
+        </div>
       </div>
+
     </div>
-
-  </div>
-</section>
+  </section>
 
 
 
 
 
-<!-- Promotions / Offers Section -->
-<section class="px-6 md:px-16 py-20 bg-gray-900/90 relative roboto-rose">
-  <div class="text-center mb-16">
-    <h2 class="text-3xl md:text-4xl font-bold text-white">
-      Special <span class="text-orange-600">Offers</span>
-    </h2>
-    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-      Check out our latest promotions and bonuses! Grab them before they're gone.
-    </p>
-  </div>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-    
-    <!-- Offer 1 -->
-    <div class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg shadow-gray-800">
-
-      <h1 class="absolute top-3 right-1 px-6 bg-red-700 rounded-4xl">Claim Now</h1>
-      <img src="jackpot.jpeg" alt="Offer 1" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-      <div class="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition">
-        <h3 class="text-xl font-bold text-white mb-2">Welcome Bonus</h3>
-        <p class="text-gray-300 mb-4">Get 100% extra on your first deposit!</p>
-        <button class="bg-red-600 px-4 py-2 rounded-xl text-white hover:bg-red-500 transition">Claim Now</button>
-      </div>
-    </div>
-
-    <!-- Offer 2 -->
-    <div class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg shadow-gray-800">
-      <h1 class="absolute top-3 right-1 px-6 bg-red-700 rounded-4xl">Spin Now</h1>
-      <img src="big win.jpeg" alt="Offer 2" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-      <div class="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition">
-        <h3 class="text-xl font-bold text-white mb-2">Daily Spins</h3>
-        <p class="text-gray-300 mb-4">Spin the wheel daily for exciting rewards!</p>
-        <button class="bg-red-600 px-4 py-2 rounded-xl text-white hover:bg-red-500 transition">Spin Now</button>
-      </div>
-    </div>
-
-    <!-- Offer 3 -->
-    <div class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg shadow-gray-800">
-      <h1 class="absolute top-3 right-1 px-6 bg-red-700 rounded-4xl">Get Bonus</h1>
-      <img src="winer.jpeg" alt="Offer 3" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
-      <div class="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition">
-        <h3 class="text-xl font-bold text-white mb-2">Weekend Bonus</h3>
-        <p class="text-gray-300 mb-4">Deposit on weekends and get 50% extra!</p>
-        <button class="bg-red-600 px-4 py-2 rounded-xl text-white hover:bg-red-500 transition">Get Bonus</button>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-<!-- Testimonials Section -->
-<section class="px-6 md:px-16 py-20 bg-black roboto-rose">
-  <div class="text-center mb-16">
-    <h2 class="text-3xl md:text-4xl font-bold text-white">
-      What Our <span class="text-orange-600">Players Say</span>
-    </h2>
-    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-      Hear from our players who enjoy thrilling games and amazing rewards every day.
-    </p>
-  </div>
-
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
-    
-    <!-- Testimonial 1 -->
-    <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center shadow-lg shadow-gray-800 hover:scale-105 transition duration-300 border border-white/10">
-      <img src="boy.webp" alt="User 1" class="w-16 h-16 rounded-full mx-auto mb-4">
-      <h3 class="text-lg font-semibold text-white mb-2">Alex R.</h3>
-      <p class="text-gray-300 italic">"The games are amazing! I love the fast gameplay and the daily rewards keep me coming back."</p>
-    </div>
-
-    <!-- Testimonial 2 -->
-    <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center shadow-lg shadow-gray-800 hover:scale-105 transition duration-300 border border-white/10">
-      <img src="maria.webp" alt="User 2" class="w-16 h-16 rounded-full mx-auto mb-4">
-      <h3 class="text-lg font-semibold text-white mb-2">Maria L.</h3>
-      <p class="text-gray-300 italic">"Safe and secure platform. I feel confident depositing and playing here every day!"</p>
-    </div>
-
-    <!-- Testimonial 3 -->
-    <div class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center shadow-lg shadow-gray-800 hover:scale-105 transition duration-300 border border-white/10">
-      <img src="alex.jpeg" alt="User 3" class="w-16 h-16 rounded-full mx-auto mb-4">
-      <h3 class="text-lg font-semibold text-white mb-2">John K.</h3>
-      <p class="text-gray-300 italic">"The variety of games is insane! Slots, roulette, and crash games all in one place."</p>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-<!-- FAQ Section -->
-<section class="px-6 md:px-16 py-20 bg-gray-950 roboto-rose">
-  <div class="text-center mb-16">
-    <h2 class="text-3xl md:text-4xl font-bold text-white">
-      Frequently <span class="text-orange-600">Asked Questions</span>
-    </h2>
-    <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
-      Got questions? We've got answers. Check out our most commonly asked questions below.
-    </p>
-  </div>
-
-  <div class="max-w-4xl mx-auto space-y-4">
-    
-    <!-- FAQ Item 1 -->
-    <div class="bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 cursor-pointer faq-item">
-      <h3 class="text-lg font-semibold text-white flex justify-between items-center">
-        How do I start playing games?
-        <span class="text-orange-600 faq-toggle">+</span>
-      </h3>
-      <p class="text-gray-300 mt-2 hidden">
-        Simply create an account, log in, deposit, and choose your favorite game to start playing instantly.
+  <!-- Promotions / Offers Section -->
+ <a href="https://t.me/eliteusasweeps"> <section id="offers" class="px-6 md:px-16 py-20 bg-gray-900/90 relative roboto-rose">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-white">
+        Special <span class="text-orange-600">Offers</span>
+      </h2>
+      <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+        Check out our latest promotions and bonuses! Grab them before they're gone.
       </p>
     </div>
 
-    <!-- FAQ Item 2 -->
-    <div class="bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 cursor-pointer faq-item">
-      <h3 class="text-lg font-semibold text-white flex justify-between items-center">
-        Is my account safe and secure?
-        <span class="text-orange-600 faq-toggle">+</span>
-      </h3>
-      <p class="text-gray-300 mt-2 hidden">
-        Yes! We use top-level encryption and security measures to protect your data and transactions.
-      </p>
-    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
-    <!-- FAQ Item 3 -->
-    <div class="bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 cursor-pointer faq-item">
-      <h3 class="text-lg font-semibold text-white flex justify-between items-center">
-        Can I play on mobile devices?
-        <span class="text-orange-600 faq-toggle">+</span>
-      </h3>
-      <p class="text-gray-300 mt-2 hidden">
-        Absolutely! Our platform is fully responsive, so you can play anytime, anywhere from your phone or tablet.
-      </p>
-    </div>
+      <!-- Offer 1 -->
+      <div class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg shadow-gray-800">
 
-    <!-- FAQ Item 4 -->
-    <div class="bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 cursor-pointer faq-item">
-      <h3 class="text-lg font-semibold text-white flex justify-between items-center">
-        How do I claim daily rewards?
-        <span class="text-orange-600 faq-toggle">+</span>
-      </h3>
-      <p class="text-gray-300 mt-2 hidden">
-        Log in every day, play any game, and rewards will automatically be credited to your account.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- Footer Section -->
-<footer class="bg-black/90 text-gray-300 roboto-rose px-6 md:px-16 py-16 relative">
-  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-
-    <!-- Logo & About -->
-    <div>
-      <div class="flex items-center gap-2 mb-4">
-        <img src="lets bet.jpg" alt="Letsbets Logo" class="h-12 w-12 rounded-full">
-        <h1 class="italic text-2xl font-semibold text-white">Lets<span class="text-orange-600">bets</span></h1>
+        <h1 class="absolute top-3 right-1 px-6 bg-red-700 rounded-4xl">Claim Now</h1>
+        <img src="jackpot.jpeg" alt="Offer 1"
+          class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+        <div
+          class="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition">
+          <h3 class="text-xl font-bold text-white mb-2">Welcome Bonus</h3>
+          <p class="text-gray-300 mb-4">Get 100% extra on your first deposit!</p>
+          <button class="bg-red-600 px-4 py-2 rounded-xl text-white hover:bg-red-500 transition">Claim Now</button>
+        </div>
       </div>
-      <p class="text-gray-400">
-        Your ultimate gaming playground. Play anytime, anywhere with exciting games, instant rewards, and daily bonuses.
+
+      <!-- Offer 2 -->
+      <div class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg shadow-gray-800">
+        <h1 class="absolute top-3 right-1 px-6 bg-red-700 rounded-4xl">Spin Now</h1>
+        <img src="big win.jpeg" alt="Offer 2"
+          class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+        <div
+          class="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition">
+          <h3 class="text-xl font-bold text-white mb-2">Daily Spins</h3>
+          <p class="text-gray-300 mb-4">Spin the wheel daily for exciting rewards!</p>
+          <button class="bg-red-600 px-4 py-2 rounded-xl text-white hover:bg-red-500 transition">Spin Now</button>
+        </div>
+      </div>
+
+      <!-- Offer 3 -->
+      <div class="group relative rounded-2xl overflow-hidden cursor-pointer shadow-lg shadow-gray-800">
+        <h1 class="absolute top-3 right-1 px-6 bg-red-700 rounded-4xl">Get Bonus</h1>
+        <img src="winer.jpeg" alt="Offer 3"
+          class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+        <div
+          class="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center opacity-0 group-hover:opacity-100 transition">
+          <h3 class="text-xl font-bold text-white mb-2">Weekend Bonus</h3>
+          <p class="text-gray-300 mb-4">Deposit on weekends and get 50% extra!</p>
+          <button class="bg-red-600 px-4 py-2 rounded-xl text-white hover:bg-red-500 transition">Get Bonus</button>
+        </div>
+      </div>
+
+    </div>
+  </section></a>
+
+
+
+
+  <!-- Testimonials Section -->
+  <section id="review" class="px-6 md:px-16 py-20 bg-black roboto-rose">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-white">
+        What Our <span class="text-orange-600">Players Say</span>
+      </h2>
+      <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+        Hear from our players who enjoy thrilling games and amazing rewards every day.
       </p>
     </div>
 
-    <!-- Quick Links -->
-    <div>
-      <h3 class="text-white font-semibold mb-4">Quick Links</h3>
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:text-orange-600 transition duration-300">Home</a></li>
-        <li><a href="#" class="hover:text-orange-600 transition duration-300">Games</a></li>
-        <li><a href="#" class="hover:text-orange-600 transition duration-300">Offers</a></li>
-        <li><a href="#" class="hover:text-orange-600 transition duration-300">Contact</a></li>
-      </ul>
-    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
 
-    <!-- Support -->
-    <div>
-      <h3 class="text-white font-semibold mb-4">Support</h3>
-      <ul class="space-y-2">
-        <li><a href="#" class="hover:text-orange-600 transition duration-300">FAQ</a></li>
-        <li><a href="#" class="hover:text-orange-600 transition duration-300">Terms & Conditions</a></li>
-        <li><a href="#" class="hover:text-orange-600 transition duration-300">Privacy Policy</a></li>
-        <li><a href="#" class="hover:text-orange-600 transition duration-300">Help Center</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact / Socials -->
-    <div>
-      <h3 class="text-white font-semibold mb-4">Connect with Us</h3>
-      <div class="flex gap-4 mb-4">
-        <a href="#" class="hover:text-blue-600 transition duration-300"><i class="fa-brands fa-facebook-f"></i></a>
-        <a href="#" class="hover:text-pink-500 transition duration-300"><i class="fa-brands fa-instagram"></i></a>
-        <a href="#" class="hover:text-blue-400 transition duration-300"><i class="fa-brands fa-x-twitter"></i></a>
-        <a href="#" class="hover:text-green-500 transition duration-300"><i class="fa-brands fa-whatsapp"></i></a>
+      <!-- Testimonial 1 -->
+      <div
+        class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center shadow-lg shadow-gray-800 hover:scale-105 transition duration-300 border border-white/10">
+        <img src="boy.webp" alt="User 1" class="w-16 h-16 rounded-full mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-white mb-2">Alex R.</h3>
+        <p class="text-gray-300 italic">"The games are amazing! I love the fast gameplay and the daily rewards keep me
+          coming back."</p>
       </div>
-      <p>Email: <a href="mailto:support@letsbets.com" class="text-orange-600 hover:underline">support@letsbets.com</a></p>
-      <p class="mt-2">Phone: <a href="tel:+1234567890" class="text-orange-600 hover:underline">+1 234 567 890</a></p>
+
+      <!-- Testimonial 2 -->
+      <div
+        class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center shadow-lg shadow-gray-800 hover:scale-105 transition duration-300 border border-white/10">
+        <img src="maria.webp" alt="User 2" class="w-16 h-16 rounded-full mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-white mb-2">Maria L.</h3>
+        <p class="text-gray-300 italic">"Safe and secure platform. I feel confident depositing and playing here every
+          day!"</p>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div
+        class="bg-black/40 backdrop-blur-md p-8 rounded-2xl text-center shadow-lg shadow-gray-800 hover:scale-105 transition duration-300 border border-white/10">
+        <img src="alex.jpeg" alt="User 3" class="w-16 h-16 rounded-full mx-auto mb-4">
+        <h3 class="text-lg font-semibold text-white mb-2">John K.</h3>
+        <p class="text-gray-300 italic">"The variety of games is insane! Slots, roulette, and crash games all in one
+          place."</p>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+  <!-- FAQ Section -->
+  <section id="faq" class="px-6 md:px-16 py-20 bg-gray-950 roboto-rose">
+    <div class="text-center mb-16">
+      <h2 class="text-3xl md:text-4xl font-bold text-white">
+        Frequently <span class="text-orange-600">Asked Questions</span>
+      </h2>
+      <p class="text-gray-400 mt-4 max-w-2xl mx-auto">
+        Got questions? We've got answers. Check out our most commonly asked questions below.
+      </p>
     </div>
 
-  </div>
+    <div class="max-w-4xl mx-auto space-y-4">
 
-  <hr class="border-gray-700 my-8">
+      <!-- FAQ Item 1 -->
+      <div class="bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 cursor-pointer faq-item">
+        <h3 class="text-lg font-semibold text-white flex justify-between items-center">
+          How do I start playing games?
+          <span class="text-orange-600 faq-toggle">+</span>
+        </h3>
+        <p class="text-gray-300 mt-2 hidden">
+          Simply create an account, log in, deposit, and choose your favorite game to start playing instantly.
+        </p>
+      </div>
 
-  <!-- Bottom -->
-  <div class="text-center text-gray-500 text-sm">
-    &copy; 2026 Letsbets. All rights reserved.
-  </div>
-</footer>
+      <!-- FAQ Item 2 -->
+      <div class="bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 cursor-pointer faq-item">
+        <h3 class="text-lg font-semibold text-white flex justify-between items-center">
+          Is my account safe and secure?
+          <span class="text-orange-600 faq-toggle">+</span>
+        </h3>
+        <p class="text-gray-300 mt-2 hidden">
+          Yes! We use top-level encryption and security measures to protect your data and transactions.
+        </p>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 cursor-pointer faq-item">
+        <h3 class="text-lg font-semibold text-white flex justify-between items-center">
+          Can I play on mobile devices?
+          <span class="text-orange-600 faq-toggle">+</span>
+        </h3>
+        <p class="text-gray-300 mt-2 hidden">
+          Absolutely! Our platform is fully responsive, so you can play anytime, anywhere from your phone or tablet.
+        </p>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="bg-black/40 backdrop-blur-md p-6 rounded-2xl border border-white/10 cursor-pointer faq-item">
+        <h3 class="text-lg font-semibold text-white flex justify-between items-center">
+          How do I claim daily rewards?
+          <span class="text-orange-600 faq-toggle">+</span>
+        </h3>
+        <p class="text-gray-300 mt-2 hidden">
+          Log in every day, play any game, and rewards will automatically be credited to your account.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+  <footer class="bg-black/90 text-gray-300 roboto-rose px-6 md:px-16 py-16 relative">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+
+      <!-- Logo & About -->
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <img src="lets bet.jpg" alt="Letsbets Logo" class="h-12 w-12 rounded-full">
+          <h1 class="italic text-2xl font-semibold text-white">Lets<span class="text-orange-600">bets</span></h1>
+        </div>
+        <p class="text-gray-400">
+          Your ultimate gaming playground. Play anytime, anywhere with exciting games, instant rewards, and daily
+          bonuses.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="hover:text-orange-600 transition duration-300">Home</a></li>
+          <li><a href="#" class="hover:text-orange-600 transition duration-300">Games</a></li>
+          <li><a href="#" class="hover:text-orange-600 transition duration-300">Offers</a></li>
+          <li><a href="#" class="hover:text-orange-600 transition duration-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Support -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Support</h3>
+        <ul class="space-y-2">
+          <li><a href="#faq" class="hover:text-orange-600 transition duration-300">FAQ</a></li>
+          <li><a href="#" class="hover:text-orange-600 transition duration-300">Terms & Conditions</a></li>
+          <li><a href="#" class="hover:text-orange-600 transition duration-300">Privacy Policy</a></li>
+          <li><a href="https://t.me/eliteusasweeps" class="hover:text-orange-600 transition duration-300">Help Center</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact / Socials -->
+      <div>
+        <h3 class="text-white font-semibold mb-4">Connect with Us</h3>
+        <div class="flex gap-4 mb-4">
+          <a href="https://t.me/eliteusasweeps" class="hover:text-blue-600 transition duration-300"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="https://t.me/eliteusasweeps" class="hover:text-pink-500 transition duration-300"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://t.me/eliteusasweeps" class="hover:text-blue-400 transition duration-300"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="https://t.me/eliteusasweeps" class="hover:text-green-500 transition duration-300"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <p>Email: <a href="mailto:support@letsbets.com" class="text-orange-600 hover:underline">support@letsbets.com</a>
+        </p>
+        <p class="mt-2">Phone: <a href="tel:+1234567890" class="text-orange-600 hover:underline">+1 234 567 890</a></p>
+      </div>
+
+    </div>
+
+    <hr class="border-gray-700 my-8">
+
+    <!-- Bottom -->
+    <div class="text-center text-gray-500 text-sm">
+      &copy; 2026 Letsbets. All rights reserved.
+    </div>
+  </footer>
 
 
 
@@ -624,52 +800,53 @@ group-hover:scale-110 transition duration-300">
 
 
 
-<script>
-  // FAQ Toggle Script
-  const faqItems = document.querySelectorAll(".faq-item");
-  faqItems.forEach(item => {
-    item.addEventListener("click", () => {
-      const answer = item.querySelector("p");
-      const toggle = item.querySelector(".faq-toggle");
-      answer.classList.toggle("hidden");
-      toggle.textContent = answer.classList.contains("hidden") ? "+" : "-";
+  <script>
+    // FAQ Toggle Script
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach(item => {
+      item.addEventListener("click", () => {
+        const answer = item.querySelector("p");
+        const toggle = item.querySelector(".faq-toggle");
+        answer.classList.toggle("hidden");
+        toggle.textContent = answer.classList.contains("hidden") ? "+" : "-";
+      });
     });
-  });
-</script>
+  </script>
 
-<script>
-  const text = "Welcome to Letsbets";
-  let index = 0;
-  let isDeleting = false;
+  <script>
+    const text = "Welcome to Letsbets";
+    let index = 0;
+    let isDeleting = false;
 
-  const speed = 80;
-  const eraseSpeed = 40;
-  const delay = 1200;
+    const speed = 80;
+    const eraseSpeed = 40;
+    const delay = 1200;
 
-  function typeEffect() {
-    let current = text.substring(0, index);
-    let styledText = "";
-    for (let i = 0; i < current.length; i++) {
-      let char = current[i];
-      if (i >= 11 && i < 19) {
-        styledText += `<span class="text-orange-600">${char}</span>`;
-      } else {
-        styledText += char;
+    function typeEffect() {
+      let current = text.substring(0, index);
+      let styledText = "";
+      for (let i = 0; i < current.length; i++) {
+        let char = current[i];
+        if (i >= 11 && i < 19) {
+          styledText += `<span class="text-orange-600">${char}</span>`;
+        } else {
+          styledText += char;
+        }
       }
-    }
-    document.getElementById("typing-text").innerHTML = styledText;
+      document.getElementById("typing-text").innerHTML = styledText;
 
-    if (!isDeleting) {
-      index++;
-      if (index > text.length) { isDeleting = true; setTimeout(typeEffect, delay); return; }
-    } else {
-      index--;
-      if (index === 0) isDeleting = false;
+      if (!isDeleting) {
+        index++;
+        if (index > text.length) { isDeleting = true; setTimeout(typeEffect, delay); return; }
+      } else {
+        index--;
+        if (index === 0) isDeleting = false;
+      }
+      setTimeout(typeEffect, isDeleting ? eraseSpeed : speed);
     }
-    setTimeout(typeEffect, isDeleting ? eraseSpeed : speed);
-  }
-  typeEffect();
-</script>
+    typeEffect();
+  </script>
 
 </body>
+
 </html>
